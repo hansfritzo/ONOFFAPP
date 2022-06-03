@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="textby">10sp</dimen>
+    <dimen name="textbutton">14sp</dimen>
+    <dimen name="icono">200dp</dimen>
+    <dimen name="iconogps">100dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="dimen_load">25dp</dimen>
+    <dimen name="dimen_button">40dp</dimen>
+    <dimen name="dimen_sheet">400dp</dimen>
+    <dimen name="dimen_padding">5dp</dimen>
+    <dimen name="height_button">40dp</dimen>
+    <dimen name="txtbotton">12sp</dimen>
+    <dimen name="txtmensaje">16sp</dimen>
+    <dimen name="widthbotton">100dp</dimen>
+    <dimen name="heightbotton">40dp</dimen>
+</resources>

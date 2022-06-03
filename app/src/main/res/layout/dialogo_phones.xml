@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androind="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="@color/backgroundview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="@dimen/margin_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="center"
+                        android:text="@string/tel_fonos"
+                        android:textColor="@color/titulosprincipla"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                       <androidx.recyclerview.widget.RecyclerView
+                           android:id="@+id/recyPhones"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent">
+
+                       </androidx.recyclerview.widget.RecyclerView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp">
+                    <TextView
+                        android:id="@+id/txtCancelar"
+                        android:layout_width="@dimen/widthbotton"
+                        android:layout_height="@dimen/heightbotton"
+                        android:background="@drawable/button_approve"
+                        android:fontFamily="@font/canaro"
+                        android:gravity="center"
+                        android:text="@string/cancelar"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="@dimen/margin_10dp"
+                        android:textSize="@dimen/txtbotton" />
+                    <TextView
+                        android:id="@+id/txtNuevo"
+                        android:layout_width="@dimen/widthbotton"
+                        android:layout_height="@dimen/heightbotton"
+                        android:background="@drawable/button_approve"
+                        android:fontFamily="@font/canaro"
+                        android:gravity="center"
+                        android:text="@string/nuevo"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txtbotton" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">On Off</string>
+    <string name="solucionar_el_problema">Lo sentimos, se produjo un error en nuestra plataforma. Estamos trabajando para solucionar el problema.</string>
+    <string name="version">OnOff</string>
+    <string name="todo">TODO</string>
+    <string name="oops">¡Oops!</string>
+    <string name="telefonos">¡Supera el numero maximo de teléfonos permitodos.!</string>
+    <string name="Agregar">¡Agregar Telefono!</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="logo">logo</string>
+    <string name="usuarioContrasena">Por favor recuerda ingresar tu usuario y contraseña.</string>
+    <string name="validarUsuarioContrasena">El nombre de usuario o contraseña son incorrectos.</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="continuar">CONTINUAR</string>
+    <string name="nuevo">NUEVO</string>
+    <string name="clientes">Clientes</string>
+    <string name="campos">Todos los campos son obligatorios.</string>
+    <string name="eliminado">Cliente eliminado con exito.</string>
+    <string name="registrado">Cliente registrado con exito.</string>
+    <string name="actualizado">Cliente actualizado con exito.</string>
+    <string name="telefonos_disponibles">Teléfonos disponibles.</string>
+    <string name="documento">Documento</string>
+    <string name="cliente">Cliente</string>
+    <string name="telefono">Telefono</string>
+    <string name="lo_sentimos_pero_no_tienes_clientes_creados_en_la_aplicaci_n">Lo sentimos, pero no tienes clientes creados en la aplicación.</string>
+    <string name="tel_fonos">Teléfonos</string>
+    <string name="tel_fono">Teléfono</string>
+    <string name="n_mero_documento">Número documento</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="primer">Primer</string>
+    <string name="registro">Registro</string>
+    <string name="editar_cliente">Editar Cliente</string>
+
+
+</resources>

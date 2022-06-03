@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/backgroundview"
+    tools:context=".ui.view.SplahsFragment">
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:id="@+id/errorplanilla"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:src="@drawable/logoonoff"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+            </ImageView>
+            <TextView
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/canaro"
+                android:gravity="center"
+                android:text="@string/oops"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/robotobold"
+                android:gravity="center"
+                android:text="@string/lo_sentimos_pero_no_tienes_clientes_creados_en_la_aplicaci_n"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

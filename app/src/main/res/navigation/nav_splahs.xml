@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_splahs"
+    app:startDestination="@id/splahsFragment">
+
+    <fragment
+        android:id="@+id/splahsFragment"
+        android:name="com.onoff.onoffapp.ui.view.SplahsFragment"
+        android:label="splahs_fragment"
+        tools:layout="@layout/splahs_fragment" >
+        <action
+            android:id="@+id/action_splahsFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_splahsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.onoff.onoffapp.ui.view.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.onoff.onoffapp.ui.view.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+</navigation>
