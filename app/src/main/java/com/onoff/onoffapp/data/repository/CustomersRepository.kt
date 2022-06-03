@@ -78,7 +78,6 @@ class CustomersRepository @Inject constructor(
     }
 
     suspend fun getQueryDataBase(apiFailed: ApiFailed): CustomersResponse {
-        val response = customersDao.getCustomers()
         return CustomersResponse(
             apiFailed = apiFailed,
             customers = emptyList())

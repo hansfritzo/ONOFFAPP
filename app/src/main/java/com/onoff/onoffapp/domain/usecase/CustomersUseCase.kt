@@ -1,13 +1,18 @@
 package com.onoff.onoffapp.domain.usecase
 
 import com.onoff.onoffapp.data.database.entities.CustomersEntity
+import com.onoff.onoffapp.data.database.entities.CustomersPhonesEntity
 import com.onoff.onoffapp.data.database.entities.toDataBase
+import com.onoff.onoffapp.data.repository.CustomersPhonesRepository
 import com.onoff.onoffapp.data.repository.CustomersRepository
 import com.onoff.onoffapp.domain.model.*
 import com.onoff.onoffapp.util.FlagConstants.OK_RESPONSE
 import javax.inject.Inject
 
-class CustomersUseCase @Inject constructor(private val customersRepository: CustomersRepository) {
+class CustomersUseCase @Inject constructor(
+    private val customersRepository: CustomersRepository,
+    private val customersPhonesRepository: CustomersPhonesRepository,
+) {
     suspend fun getDataBaseFromApi(): CustomersResponse {
         val response = customersRepository.getCustomersFromApi()
         return if (response.apiFailed.success) {
@@ -45,15 +50,22 @@ class CustomersUseCase @Inject constructor(private val customersRepository: Cust
 
     suspend fun setCustomers(customersRequest: CustomersRequest): SetCustomersResponse {
         val response = customersRepository.setCustomersApi(customersRequest)
-        if (response.apiFailed.success) customersRepository.insert(CustomersEntity(
-            cId = response.cId,
-            cDocument = customersRequest.cDocument,
-            cName1 = customersRequest.cName1,
-            cName2 = customersRequest.cName2,
-            cLastName1 = customersRequest.cLastName1,
-            cLastName2 = customersRequest.cLastName2,
-            isSync = true
-        ))
+        if (response.apiFailed.success) {
+            customersRepository.insert(CustomersEntity(
+                cId = response.cId,
+                cDocument = customersRequest.cDocument,
+                cName1 = customersRequest.cName1,
+                cName2 = customersRequest.cName2,
+                cLastName1 = customersRequest.cLastName1,
+                cLastName2 = customersRequest.cLastName2,
+                isSync = true)
+            )
+            customersPhonesRepository.insert(CustomersPhonesEntity(cpId = response.cpId,
+                cId = response.cId,
+                cpPhone = customersRequest.cpPhone,
+                isSync = true))
+        }
+
         return response
     }
 
